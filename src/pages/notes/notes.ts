@@ -61,6 +61,7 @@ export class Notes {
           handler: data => {
             let index = this.notes.indexOf(note);
 
+            //means if index is true and there is a note saved
             if(index > -1){
               this.notes[index] = data;
             }
@@ -76,6 +77,10 @@ export class Notes {
   deleteNote(note){
 
     let index = this.notes.indexOf(note);
+
+//.splice(index, how many
+// indexes to remove - here remove 1 position which
+// is at position of index - our note -)
 
     if(index > -1){
       this.notes.splice(index, 1);
